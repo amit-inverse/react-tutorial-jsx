@@ -1,4 +1,5 @@
 // 1. Import the React and ReactDOM libraries
+import { buildQueries } from '@testing-library/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -10,12 +11,19 @@ const root = ReactDOM.createRoot(el);
 
 // 4. Create a component
 function App() {
-    // const inputType = 'number';
-    // const minValue = 5;
+    // 1. All prop name follow camelCase
+    // return <textarea autoFocus={true} />;
 
-    // return <input type={inputType} min={minValue} />;
-    // return <input type="number" min={5} />;
-    return <input style={{ border: '3px solid red' }} type="number" min={5} />;
+    // 2. Number attribute use curly braces
+    // return <input maxLength={5} />;
+
+    // 3. Boolean 'true' can be written with just the property name. 'false' should be written with curly braces
+    // return <input spellCheck />;
+
+    // 4. The 'class' attribute is written as 'className'
+
+    // 5. In-line styles are provided as objects
+    return <input style={{ border: '1px solid blue' }} />;
 }
 
 // 5. Show the component on the screen
